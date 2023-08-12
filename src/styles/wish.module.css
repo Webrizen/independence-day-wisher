@@ -489,3 +489,12 @@
     transform-origin: -21vw -4vh;
     box-shadow: 2vmin 0 1.1296140658244012vmin currentColor;
 }
+
+@media screen and (max-width: 768px){
+    .onboarding{
+        height: 100vh;
+    }
+    .landing{
+        max-width: 90%;
+    }
+}

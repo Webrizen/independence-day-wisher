@@ -8,6 +8,7 @@ import { doc, getDoc } from "firebase/firestore";
 
 export default function Card({ id }) {
   const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Fetch data from Firestore based on the passed document ID
@@ -32,6 +33,8 @@ export default function Card({ id }) {
           title: "Oops... Something went wrong!",
           text: "Unable to fetch the wish data.",
         });
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -41,19 +44,24 @@ export default function Card({ id }) {
   return (
     <>
       <div className={styles.wisherRight}>
-        <div className={styles.preview}>
-          <Image
-            src={data?.ProfileURL || "/placeholder.svg"}
-            alt="Profile Photo"
-            width={300}
-            height={300}
-          />
-          <h2>{data?.ReceiverName || "Receiver Name"}</h2>
-          <span className={styles.cursive}>Wish You</span>
-          <p>{data?.wishMessage || "No wish message available."}</p>
-          <span className={styles.cursive}>From</span>
-          <h3>{data?.SenderName || "Your Name"}</h3>
-        </div>
+        {isLoading ? (
+          <div className={styles.previewLoading}>
+          </div>
+        ) : (
+          <div className={styles.preview}>
+            <Image
+              src={data?.ProfileURL || "/placeholder.svg"}
+              alt="Profile Photo"
+              width={300}
+              height={300}
+            />
+            <h2>{data?.ReceiverName || "Receiver Name"}</h2>
+            <span className={styles.cursive}>Wish You</span>
+            <p>{data?.wishMessage || "No wish message available."}</p>
+            <span className={styles.cursive}>From</span>
+            <h3>{data?.SenderName || "Your Name"}</h3>
+          </div>
+        )}
       </div>
     </>
   );

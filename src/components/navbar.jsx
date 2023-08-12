@@ -8,10 +8,12 @@ export default function Navbar() {
   return (
     <>
     <header className={styles.header}>
+        <Link href="/">
         <div className={styles.Logo}>
             <Image src={Logo} alt='Logo' />
             <span>Independence Day Wisher Online</span>
         </div>
+        </Link>
         <div className={styles.links}>
             <Link href="/">Home</Link>
             <Link href="/donate">Donate</Link>

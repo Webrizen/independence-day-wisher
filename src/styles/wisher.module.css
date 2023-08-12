@@ -56,6 +56,27 @@
     position: relative;
     padding-top: 140px;
 }
+.wisherRight .previewLoading{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 10px;
+    background: url(/bg.gif);
+    background-color: rgba(0,0,0,0.1);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    position: relative;
+    padding-top: 140px;
+}
 .preview img{
     position: absolute;
     top: -40%;
@@ -80,4 +101,17 @@
     border-radius: 10px;
     background: rgba(0,0,0,0.1);
     cursor: pointer;
+}
+@media screen and (max-width: 768px){
+    .wisher{
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 250px;
+    }
+    .wisherLeft form{
+        width: 100%;
+    }
+    .wisherRight .preview, .wisherRight .previewLoading{
+        width: 100%;
+    }
 }
