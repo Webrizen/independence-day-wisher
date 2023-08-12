@@ -54,6 +54,8 @@ export default function Card({ id }) {
               alt="Profile Photo"
               width={300}
               height={300}
+              placeholder = 'blur'
+            blurDataURL="/blur.svg"
             />
             <h2>{data?.ReceiverName || "Receiver Name"}</h2>
             <span className={styles.cursive}>Wish You</span>
