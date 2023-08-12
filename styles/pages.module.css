@@ -1,0 +1,96 @@
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+}
+
+.leftHero {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    gap: 10px;
+    height: 100%;
+    padding-left: 40px;
+}
+
+.leftHero span {
+    background: linear-gradient(45deg, orange, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.leftHero h1 {
+    font-size: 3rem;
+}
+
+.rightHero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.rightHero img {
+    width: 90%;
+    height: auto;
+    mix-blend-mode: multiply;
+}
+
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.errorContent {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.errorHeading {
+    font-size: 2rem;
+    background: linear-gradient(45deg, orange, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.errorText {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.errorLink {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.errorLink:hover {
+    background-color: #2980b9;
+}
+
+.errorImage img {
+    width: auto;
+    height: 200px;
+    animation: upDown 5s ease-in-out infinite;
+}
+
+@keyframes upDown {
+    50% {
+        transform: translateY(-40px);
+    }
+}
