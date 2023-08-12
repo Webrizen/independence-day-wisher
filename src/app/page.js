@@ -101,6 +101,8 @@ export default function Home() {
         <Image
             src={heroImages[currentImageIndex]}
             alt="Hero Image"
+            placeholder = 'blur'
+            blurDataURL="/blur.svg"
           />
       </div>
     </section>
