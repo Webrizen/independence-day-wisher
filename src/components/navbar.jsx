@@ -16,8 +16,8 @@ export default function Navbar() {
         </Link>
         <div className={styles.links}>
             <Link href="/">Home</Link>
-            <Link href="/donate">Donate</Link>
-            <Link href="/about">About</Link>
+            <Link href="https://www.buymeacoffee.com/webrizen">Donate</Link>
+            <Link href="https://www.truelancer.com/freelancer/nightmareloops">Hire Me</Link>
         </div>
     </header> 
     </>
